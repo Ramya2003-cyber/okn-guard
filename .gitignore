@@ -1,0 +1,48 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Conda and virtual environments
+.conda/
+.venv/
+venv/
+
+# IDE
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Retrieved data and run artifacts
+data/raw/*
+data/interim/*
+data/processed/*
+artifacts/runs/*
+artifacts/reports/*
+
+# Preserve empty directories
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+!artifacts/runs/.gitkeep
+!artifacts/reports/.gitkeep
+
+# OS files
+.DS_Store
+Thumbs.db

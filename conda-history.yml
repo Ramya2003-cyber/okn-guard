@@ -1,0 +1,6 @@
+name: okn-guard
+channels:
+  - defaults
+dependencies:
+  - python=3.11.16
+prefix: C:\Users\ramya\miniconda3\envs\okn-guard

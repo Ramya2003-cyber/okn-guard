@@ -1,0 +1,43 @@
+project:
+  name: okn-guard
+  version: 0.1.0
+
+kg:
+  primary_server: proto-okn
+  graphs: []
+  require_schema_inspection: true
+  require_exact_identifier_matching: true
+  log_raw_responses: true
+
+provenance:
+  max_hops: 3
+  preserve_unknown_fields: true
+  require_source_record_id: false
+
+literature:
+  support_limit: 20
+  contradiction_limit: 20
+  require_exact_entity_match: true
+  deduplicate_by:
+    - pmid
+    - doi
+    - trial_id
+
+verdict:
+  labels:
+    - SUPPORTED
+    - CONTRADICTED
+    - INSUFFICIENT_EVIDENCE
+    - UNVERIFIABLE
+  allow_abstention: true
+
+confidence:
+  name: audit_confidence
+  interpretation: confidence_in_verdict
+  calibrated_probability: false
+
+logging:
+  save_queries: true
+  save_raw_rows: true
+  save_rejected_evidence: true
+  save_versions: true
